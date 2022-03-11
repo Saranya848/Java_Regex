@@ -106,10 +106,11 @@ public class RegistrationRules {
 	 * Rule 1 : minimum 8 Characters
 	 * Rule 2 : Should have at least 1 Upper Case
 	 * Rule 3 : Should have at least 1 numeric number
+	 * Rule 4 : Has exactly 1 Special Character
 	 * @param password
 	 */
 	public void password(String password) {
-		input = "((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,20})";
+		input = "(((?=.*[0-9]).{1}(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%*]).{1}).{8,20})";
 
 		// Pattern p = Pattern.complie("((?=.*\\d).{8,20})");
 		Pattern p = Pattern.compile(input);
