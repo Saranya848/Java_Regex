@@ -5,7 +5,7 @@ import java.util.Scanner;
 class UserDetails {
 
 	Scanner scanner = new Scanner(System.in);
-	RegistrationRules RegistrationRules = new RegistrationRules();
+	RegistrationRules rules = new RegistrationRules();
 
 	/**
 	 * We take the input and pass it to the method to check the first name is valid.
@@ -13,7 +13,7 @@ class UserDetails {
 	public void userFirstName() {
 		System.out.println("Enter Your First Name : ");
 		String firstName = scanner.next();
-		RegistrationRules.firstName(firstName);
+		rules.firstName(firstName);
 	}
 
 	/**
@@ -23,9 +23,17 @@ class UserDetails {
 	public void userLastName() {
 		System.out.println("Enter Your Last Name : ");
 		String lastName = scanner.next();
-		RegistrationRules.lastName(lastName);
+		rules.lastName(lastName);
 	}
-
+	/**
+	 * We take the input and pass it to the method to check if the email is
+	 * valid
+	 */
+	public void userEmail() {
+		System.out.println("Enter Email : ");
+		String email = scanner.next();
+		rules.lastName(email);
+	}
 }
 
 public class UserRegistration {
@@ -38,9 +46,12 @@ public class UserRegistration {
 	public void choice() {
 		UserDetails userdetails = new UserDetails();
 		while (true) {
-			System.out.println("Enter 1 To Verify First Name\n" + "Enter 2 To Verify Last Name\n" + "Enter 0 To Exit");
+			System.out.println("Enter 1 To Verify First Name\n" + "Enter 2 To Verify Last Name\n" + "Enter 3 To Verify User Email\n" + "Enter 0 To Exit");
 			int choice = scanner.nextInt();
 			switch (choice) {
+			case 3:
+				userdetails.userEmail();
+				break;
 			case 2:
 				userdetails.userLastName();
 				break;
