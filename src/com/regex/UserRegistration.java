@@ -15,6 +15,17 @@ class UserDetails {
 		String firstName = scanner.next();
 		RegistrationRules.firstName(firstName);
 	}
+
+	/**
+	 * We take the input and pass it to the method to check if the last name is
+	 * valid
+	 */
+	public void userLastName() {
+		System.out.println("Enter Your Last Name : ");
+		String lastName = scanner.next();
+		RegistrationRules.lastName(lastName);
+	}
+
 }
 
 public class UserRegistration {
@@ -30,6 +41,9 @@ public class UserRegistration {
 			System.out.println("Enter 1 To Verify First Name\n" + "Enter 2 To Verify Last Name\n" + "Enter 0 To Exit");
 			int choice = scanner.nextInt();
 			switch (choice) {
+			case 2:
+				userdetails.userLastName();
+				break;
 			case 1:
 				userdetails.userFirstName();
 				break;
