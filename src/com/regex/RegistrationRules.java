@@ -104,10 +104,11 @@ public class RegistrationRules {
 	/**
 	 * [5] method for password
 	 * Rule 1 : minimum 8 Characters
+	 * Rule 2 : Should have at least 1 Upper Case
 	 * @param password
 	 */
 	public void password(String password) {
-		input = "^[a-z]{8,}$";
+		input = "^(?=.*[A-Z])(?=.*[a-z]).{8,}$";
 
 		// Pattern p = Pattern.complie("((?=.*\\d).{8,20})");
 		Pattern p = Pattern.compile(input);
@@ -118,6 +119,5 @@ public class RegistrationRules {
 			System.out.println("Sorry!! InValid Input");
 			System.out.println("Try valid Input");
 		}
-
 	}
 }

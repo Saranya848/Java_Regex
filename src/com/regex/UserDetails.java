@@ -48,7 +48,7 @@ public class UserDetails {
 	 * valid or not with country code
 	 */
 	public void userPassword() {
-		System.out.println("Enter Mobile Number : ");
+		System.out.println("Enter Password : ");
 		String password = scanner.next();
 		rules.lastName(password);
 	}
