@@ -14,9 +14,12 @@ public class UserRegistration {
 		while (true) {
 			System.out.println("Enter 1 To Verify First Name\n" + "Enter 2 To Verify Last Name\n"
 					+ "Enter 3 To Verify User Email\n" + "Enter 4 To Verify User Mobile NUmber with country code\n"
-					+ "Enter 5 To Verify password\n" + "Enter 0 To Exit");
+					+ "Enter 5 To Verify password\n" + "Enter 6 To Verify sampleEmails\n" + "Enter 0 To Exit");
 			int choice = scanner.nextInt();
 			switch (choice) {
+			case 6:
+				userdetails.sampleEmails();
+				break;
 			case 5:
 				userdetails.userPassword();
 				break;

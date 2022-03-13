@@ -6,6 +6,7 @@ public class UserDetails {
 
 	Scanner scanner = new Scanner(System.in);
 	RegistrationRules rules = new RegistrationRules();
+	RegistrationRules testSampleEmail = new RegistrationRules();
 
 	/**
 	 * We take the input and pass it to the method to check the first name is valid.
@@ -25,15 +26,16 @@ public class UserDetails {
 		String lastName = scanner.next();
 		rules.lastName(lastName);
 	}
+
 	/**
-	 * We take the input and pass it to the method to check if the email is
-	 * valid
+	 * We take the input and pass it to the method to check if the email is valid
 	 */
 	public void userEmail() {
 		System.out.println("Enter Email : ");
 		String email = scanner.next();
 		rules.lastName(email);
 	}
+
 	/**
 	 * We take the input and pass it to the method to check if the mobile number is
 	 * valid or not with country code
@@ -43,6 +45,7 @@ public class UserDetails {
 		String Phoneno = scanner.next();
 		rules.lastName(Phoneno);
 	}
+
 	/**
 	 * We take the input and pass it to the method to check if the mobile number is
 	 * valid or not with country code
@@ -51,5 +54,11 @@ public class UserDetails {
 		System.out.println("Enter Password : ");
 		String password = scanner.next();
 		rules.lastName(password);
+	}
+
+	public void sampleEmails() {
+		testSampleEmail.testForValidEmails();
+		testSampleEmail.testForNonValidEmails();
+
 	}
 }
